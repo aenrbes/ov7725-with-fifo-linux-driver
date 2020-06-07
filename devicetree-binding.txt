@@ -1,0 +1,23 @@
+&i2c0 {
+
+	ov7725_fifo: camera@21 {
+		compatible = "atk,ov7725fifo";
+		reg = <0x21>;
+		vsync_int-gpios = <&camera_int 0 0>;
+		fifo_wrst-gpios = <&camera_fifo_ctrl 0 0>;
+		fifo_rrst-gpios = <&camera_fifo_ctrl 1 0>;
+		fifo_oe-gpios = <&camera_fifo_ctrl 2 0>;
+		fifo_wen-gpios = <&camera_fifo_ctrl 3 0>;
+		fifo_rclk-gpios = <&camera_fifo_ctrl 4 0>;
+		fifo_data-gpios = <&camera_fifo_data 0 0>,
+				<&camera_fifo_data 1 0>,
+				<&camera_fifo_data 2 0>,
+				<&camera_fifo_data 3 0>,
+				<&camera_fifo_data 4 0>,
+				<&camera_fifo_data 5 0>,
+				<&camera_fifo_data 6 0>,
+				<&camera_fifo_data 7 0>;
+		status = "okay";
+	};
+};
+	
